@@ -1,0 +1,75 @@
+.content{
+     display: flex;
+     align-items: center;
+     justify-content: space-evenly;
+     flex-wrap: wrap;
+     padding: 20px 0px;
+     gap: 30px;
+     position: relative;
+}
+.card{
+     width: 300px;
+     min-height: 250px;
+     position: relative;
+}
+
+.main{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+    padding: 20px 0;
+}
+img{
+    width: 250px;
+    height: 230px;
+    object-fit: cover;
+  margin-left: 23px;
+}
+.ele button{
+     margin: 13px;
+     border: none;
+     background-color: white;
+     color: black;
+}
+.ele button:hover{
+      color: red;
+}
+button{
+   margin: 13px;
+   border: none;
+   color: white;
+}
+button:hover{
+     color: white;
+}
+
+
+.ele{
+     display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+      
+}
+.col{
+       width: 135vh;
+       height: 10vh;
+       display: flex;
+       align-items: center;
+       overflow: hidden;
+      
+    
+}h3{
+     text-align: center;
+}
+h5:nth-child(1){
+     color: red;
+}
+.btn{
+     float: right;
+}
+.bottm{
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+}

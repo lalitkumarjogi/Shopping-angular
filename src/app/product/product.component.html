@@ -1,0 +1,29 @@
+  <div class="main">
+        <div class="text">
+            <h3>Exclusive Product</h3>
+            <div class="col" >
+              <div class="ele"  *ngFor="let category of allcatrogory">
+                <button  (click)="getallprodcutBy(category.categoryId)" >{{category.categoryName}}</button>
+              </div>
+            </div>  
+        </div> 
+  </div>
+
+<div class="content" >
+  
+    <div class="card" *ngFor="let data of productArray">
+        <img class="card-img-top"  [src]="data.productImageUrl" alt="Card image">
+        <div class="card-body">
+          <h4 class="card-title">{{data.productName}}</h4>
+          <p class="card-text"> Rs -{{data.productPrice}}</p>
+          <p class="card-text"> Description- {{data.productDescription | slice :0-20}}</p>
+
+          <div class="bottm">
+            <p class="card-text"> Category -{{data.categoryName}}</p>
+
+            <button   class="btn btn-success" (click)="addcart(data.productId)" >Order</button>
+
+          </div>
+        </div>
+      </div>
+</div>
