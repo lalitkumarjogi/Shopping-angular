@@ -48,46 +48,29 @@ remove(id:any){
   
   Loginuser=
   {
-    "UserName": "string",
-    "UserPassword": "string"
+    "UserName": "",
+    "UserPassword": ""
   }
   RegisterCustomer=
   {
     "CustId": 0,
-    "Name": "string",
-    "MobileNo": "string",
-    "Password": "string"
+    "Name": "",
+    "MobileNo": "",
+    "Password": ""
   }
 
 loggedobj:any={}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   Registeruser(){
        this.http.RegisterCustomer(this.RegisterCustomer).subscribe((user:any)=>{
               if(user.result)
               {
-                this.loggedobj=user.data
                  alert("user creation done")
+                 this.loggedobj=user.data
+                 this.closeregister()
               }
               else{
                 alert(user.message)
-
               }
        })
   }
@@ -98,6 +81,7 @@ loggedobj:any={}
                  alert("user Login success")
                  localStorage.setItem("shopping",JSON.stringify(user.data))
                  this.getcartdata(this.loggedobj.custId)
+                 this.closelogin()
               }
               else{
                 alert(user.message)

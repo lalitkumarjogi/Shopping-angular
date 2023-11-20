@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../product.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-checkout',
@@ -7,7 +8,7 @@ import { ProductService } from '../product.service';
   styleUrls: ['./checkout.component.css']
 })
 export class CheckoutComponent  implements OnInit{
-   constructor(private http:ProductService){}
+   constructor(private http:ProductService,private router:Router){}
    loggedobj:any={}
 
    ngOnInit(): void {
@@ -40,6 +41,7 @@ export class CheckoutComponent  implements OnInit{
               console.log("res ====>",res)
               this.http.cartupdated.next(true)
               alert("order Success Placed") 
+              this.router.navigate(['product'])
              } else{
                alert(res.message)
              }

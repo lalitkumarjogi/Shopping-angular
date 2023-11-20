@@ -21,7 +21,7 @@
                                 </h3>
                                 <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
 
-                                <button ngbDropdownItem routerLink="product">Fashion Child </button>
+                                <button ngbDropdownItem routerLink="product">Accesseries </button>
                                 <button ngbDropdownItem routerLink="product">Fashion Women</button>
                                 <button ngbDropdownItem routerLink="product">Fashion Men</button>
                                   
@@ -103,9 +103,7 @@
                             </div>
                         </div>
                     </div>
-
                 </form>
-
             </div>
         </div>
     </nav>
@@ -123,7 +121,7 @@
 
             <!-- Modal Header -->
             <div class="modal-header">
-                <h4 class="modal-title">Sign In</h4>
+                <h4 class="modal-title">login In</h4>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" (click)="closelogin()"></button>
             </div>
 
@@ -131,12 +129,11 @@
             <div class="modal-body">
                 <form action="action_page.php" method="post">
                     <div class="imgcontainers">
-                        <h3>Login </h3>
                     </div>
                   
                     <div class="containers">
-                      <label for="uname"><b>Username</b></label>
-                      <input type="text" placeholder="Enter Username" name="UserName"required [(ngModel)]="Loginuser.UserName">
+                      <label for="uname"><b>Mobile No</b></label>
+                      <input type="text" placeholder="Enter Mobile No" name="UserName"required [(ngModel)]="Loginuser.UserName">
                   
                       <label for="psw"><b>Password</b></label>
                       <input type="password" placeholder="Enter Password" name="UserPassword" required [(ngModel)]="Loginuser.UserPassword">
@@ -174,21 +171,17 @@
             <div class="modal-body">
                 <form action="action_page.php">
                     <div class="container">
-                      <h1>Register</h1>
-                      <p>Please fill in this form to create an account.</p>
-                      <hr>
+                              <hr>
                   
-                      <label for="text"><b>Name</b></label>
-                      <input type="text" placeholder="Enter Name" name="name" id="name" required [(ngModel)]="RegisterCustomer.Name">
-                  
-                      <label for="psw"><b>Password</b></label>
-                      <input type="password" placeholder="Enter Password" name="Password" id="psw" required  [(ngModel)]="RegisterCustomer.Password">
-                  
+                              <label for="psw-repeat"><b>Name</b></label>
+                              <input type="text" placeholder="Enter Name" name="Name" required [(ngModel)]="RegisterCustomer.Name">  
                       <label for="psw-repeat"><b>Mobile</b></label>
-                      <input type="text" placeholder="Repeat Password" name="Mobile" id="psw-repeat" required [(ngModel)]="RegisterCustomer.MobileNo">
+                      <input type="text" placeholder="Enter Alphabet Series" name="Mobile"  required [(ngModel)]="RegisterCustomer.MobileNo">
+                      <label for="psw"><b>Password</b></label>
+                      <input type="password" placeholder="Enter  Alphabet Series" name="Password" required [(ngModel)]="RegisterCustomer.Password">
+               
                       <hr>
                   
-                      <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
                       <button type="submit" class="registerbtn" (click)="Registeruser()">Register</button>
                     </div>
                   

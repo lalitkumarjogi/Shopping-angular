@@ -18,7 +18,7 @@ getAllcategory(){
 getAllprocductBYcategory(id:any){
      return  this.http.get('https://freeapi.miniprojectideas.com/api/amazon/GetAllProductsByCategoryId?id='+id)
 }
-RegisterCustomer(user:any):Observable<any>{
+RegisterCustomer(user:any){
       return this.http.post('https://freeapi.miniprojectideas.com/api/amazon/RegisterCustomer',user)
 }
 

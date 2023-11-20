@@ -30,7 +30,6 @@ ngOnInit(): void {
 
 
  addcart(product:any){
-
      const obj={
       "CartId": 0,
       "CustId": this.loggedobj.custId,
@@ -43,16 +42,11 @@ ngOnInit(): void {
          alert("prodcut add to cart")
          this.http.cartupdated.next(true)
       }else{
-          alert(final.message)
+          alert("Login first")
       }
     })
  }
 
-
-
-
-
-    
     loadallproduct(){
       this.http.getAllProduct().subscribe((item:any)=>{
            this.productArray=item.data
